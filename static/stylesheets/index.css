@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+  /* Style for the navigation bar */
+  .navbar {
+    /* background-color: rgba(175, 173, 194, 0.75); */
+    background-color: rgba(255, 255, 255, 0.45);
+    height: 90px;
+    text-align: right;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+  /* Style for the navigation links */
+  .navbar li {
+    display: inline-block;
+    margin: 20px 60px;
+}
+
+  .navbar li a {
+    /* display: block; */
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar li a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+}
+  
+.navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.navbar li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.overlay h1 {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Chakra Petch', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    padding-top: 40px;
+}
+
+
+.image_upload {
+
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    /* padding: 50px; */
+    /* opacity: 50%; */
+    /* padding: 0 400px; */
+    align-items: center;
+}
+
+.image_upload form {
+    /* margin: 70px 150px; */
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 400px;
+    display: inline-block;
+}
+
+.result_div {
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    /* background-color: rgba(255, 255, 255, 0.25); */
+    /* border-radius: 200px; */
+}
+
+.result_div p {
+    font-size: 23px;
+    display: inline-block;
+    align-items: center;
+    padding: 8px 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat or Dog Predictor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&family=Montserrat:ital,wght@1,700&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/index.css') }}">
+    
+</head>
+<body>
+    <div class="overlay">
+
+        <ul class="navbar">
+            <li><a href="#">Predictor</a></li>
+            <li><a href="#">Source Code</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>    
+        </ul>
+
+        <h1>Image Classification Using CNN</h1>
+        
+        <p>This application will predict whether the uploaded image is a Cat or a Dog.</p>
+
+        <div class="image_upload">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+
+
+        {% if output==1 %}
+        <!-- Display the model output -->
+        <div class="result_div">
+            <!-- <h2>Model Output:</h2> -->
+            <p>{{ "Dog" }}</p>
+        </div>
+        {% endif %}
+
+        {% if output==0 %}
+        <!-- Display the model output -->
+        <div class="result_div">
+            <!-- <h2>Model Output:</h2> -->
+            <p>{{ "Cat" }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+    
+</body>
+</html>
